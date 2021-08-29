@@ -13,5 +13,6 @@ sentinelsat>=1.1.0
 matplotlib
 jupyter
 mistune<2
-sphinx_rtd_theme==0.5.1
+sphinx==3.5.3
+sphinx_rtd_theme==0.5.2
 docutils==0.16
