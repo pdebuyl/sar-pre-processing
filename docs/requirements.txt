@@ -6,7 +6,7 @@ pytest>=4.6
 PyYAML>=5.4
 setuptools
 m2r
-sphinxcontrib-bibtex
+sphinxcontrib-bibtex==2.3.0
 docutils<0.8
 nbsphinx==0.8.1
 ipykernel
