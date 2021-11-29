@@ -8,7 +8,7 @@ setuptools
 m2r
 sphinxcontrib-bibtex
 docutils<0.8
-nbsphinx
+nbsphinx==0.8.1
 ipykernel
 sentinelsat>=1.1.0
 matplotlib
