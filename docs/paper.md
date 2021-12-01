@@ -58,7 +58,7 @@ Furthermore, if a time series is processed the images are co-registered and addi
 In addition, a single speckle filter instead of a multi-temporal one is applied as well and the output will be stored as a separate layer.
 To pre-process the images, the python package uses the GPT (Graph Processing Tool) of SNAP to execute different operators provided by the Sentinel-1 Toolbox.
 The Sentinel Toolbox is available for download at step.esa.int, its source code is available in the senbox-org organization on GitHub.
-Each of these operators performs a pre-processing step. The operators can be chained together to form a graph, which is used by the python package to run on the Sentinel-1 data using the Graph Processing Framework (GPF). The graphs are stored in xml-files. Users may change the graphs by modifying the files directly or via the Sentinel Toolbox.
+Each of these operators performs a pre-processing step. The operators can be chained together to form a graph, which is used by the python package to run on the Sentinel-1 data using the Graph Processing Framework (GPF). The graphs are stored in XML files. Users may change the graphs by modifying the files directly or via the Sentinel Toolbox.
 User Guides to show how the GPF can be used are provided here: https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503053/Processing.
 
 After the pre-processing the resulting radiometrically and geometrically corrected images are stored for further usage within a NetCDF4 stack file.
@@ -81,7 +81,7 @@ The ESA's SNAP toolbox has been written in Java. For python users the developers
 Snapista (https://snap-contrib.github.io/snapista/index.html) targets mainly experts remote sensing users with python programming skills.
 It provides access to the processing operators of all toolboxes (e.g. Sentinel-1, Sentinel-2 or Sentinel-3) within SNAP.
 Expert users can generate processing graphs and execute there generated graphs in a pure Pythonic way.
-A guideline which processing steps are needed for different applications or which processing steps can or have to be combined are not provided yet.
+Guidelines about which processing steps are needed for different applications or about which processing steps can or have to be combined are not provided yet.
 As guidelines how to process different satellite data for different applications is not an easy task to do it exceeds the goal of snapista as a python wrapper for the SNAP software.
 Summarizing, snapista provides access to all SNAP toolboxes (not just to Sentinel-1 Toolbox) via python. But as it provides no default processing chains, snapista will be primarily usable by expert remote sensing users.
 The advantage of snapista is the accessibility of processing operators for SAR and optical data.
@@ -91,7 +91,7 @@ The advantage of snapista is the accessibility of processing operators for SAR a
 PyroSAR (https://pyrosar.readthedocs.io/en/latest/index.html) is a python library which provides a python wrapper to SAR pre-processing software SNAP and GAMMA [@wegnuller_sentinel-1_2016; @werner_gamma_2000].
 The library provides utilities to read and store metadata information of downloaded satellite data within a database.
 Furthermore, pyroSAR provides access to processing operators of SNAP and GAMMA.
-A default workflow with different user options is provided to process single or time-series Sentinel-1 images.
+A default workflow with different user options is provided to process a single Sentinel-1 image or a time-series of Sentinel-1 images.
 After executing the default processing workflow radiometric and geometric corrected gamma nought backscatter data are provided in Geotiff format [@truckenbrodt_pyrosar_2019].
 The processed images can also be stored within an Open Data Cube.
 For expert users which might want to use a different processing workflow pyroSAR provides an option to create SNAP xml-workflows and execute them with the GPT.
